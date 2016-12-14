@@ -1,7 +1,7 @@
 # jPlotGraph #
 
 Links:      
-[Online Example](http://projects.leonardomauro.com/jplotgraph/example/)
+[Online Example](http://projects.leonardomauro.com/jplotgraph/example/) and [JS Classes](https://www.jsclasses.org/jplotgraph)
    
 This package build a graph (cartesian plane) in **Canvas** [HTML5] through a determinate equation. Any Canvas element can be used to plot the graph, until with width and height responsives.   
 
