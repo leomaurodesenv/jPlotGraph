@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Plot Canvas Graphing an Equation" />
+	<meta name="author" content="Leonardo Mauro" />
+	
+	<title>jPlotGraph</title>
+
+	<!-- Layout -->
+	<link href="../assets/css/paper.bootstrap.min.css" rel="stylesheet" />
+	<link href="../assets/css/style.css" rel="stylesheet" />
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/bootstrap.min.js"></script>
+	<script>$(function(){ $('[data-toggle="tooltip"]').tooltip() });</script>
+	
+	<!-- jPlotGraph -->
+	<script src="../assets/js/math/math.round.js"></script>
+	<script src="../dist/jPlotGraph/plot.axis.js"></script>
+	<script src="../dist/jPlotGraph/plot.events.js"></script>
+	<script src="../dist/jPlotGraph/plot.func.linear.js"></script>
+	<script src="../dist/jPlotGraph/plot.func.linear.ui.js"></script>
+	
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body role="document">
+<div class="container main" role="main">
+
+<div class="row">
+<div class="col-md-offset-2 col-md-8">
+	<div class="panel panel-success panel-content">
+		<div class="panel-heading">
+			<h3 class="panel-title">Linear Graph</h3>
+		</div>
+		<div class="panel-body">
+			<div class="row" style="margin-top:0;">
+			<div class="col-sm-4">
+
+<div class="well bs-component">
+<form class="form-horizontal" id="func_linear" method="get" action="#">
+	<p class="title-text">Formula</p>
+	<p><code>f(x) = <span id="va"></span>&middot;x + <span id="vb"></span></code><p/>
+	
+	<p class="title-text">Variables</p>
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-addon"><var>a</var></div>
+			<input class="form-control" id="ca" name="ca" type="text" placeholder="a" value="" required />
+		</div>
+		<div class="input-group">
+			<div class="input-group-addon"><var>b</var></div>
+			<input class="form-control" id="cb" name="cb" type="text" placeholder="b" value="" required />
+		</div>
+	</div>
+	
+	<p class="title-text">Interval [x<sub>i</sub>, x<sub>f</sub>]</p>
+	<div class="form-group">
+		<div class="input-group">
+			<div class="input-group-addon"><var>Begin</var></div>
+			<input class="form-control" id="cxi" name="cxi" type="text" placeholder="x" value="" required />
+		</div>
+		<div class="input-group">
+			<div class="input-group-addon"><var>Last</var>&nbsp;</div>
+			<input class="form-control" id="cxf" name="cxf" type="text" placeholder="x" value="" required />
+		</div>
+	</div>
+	
+	<button class="btn btn-default btn-block btn-margin" type="submit" data-toggle="tooltip" data-placement="bottom" title="Apply values in Graph">Apply</button>
+	
+</form>
+</div>
+			
+</div>
+<div class="col-sm-8">
+	<canvas id="grafic-1-grau" class="plot-grafic" width="875px" height="700px"></canvas>
+</div>
+<div class="col-md-12">Projected by <a href="http://leonardomauro.com/" target="_blank" data-toggle="tooltip" title="My Website">Leonardo Mauro</a> - <a href="https://github.com/leomaurodesenv/jPlotGraph" target="_blank" data-toggle="tooltip" title="GitHub repository">GitHub</a></div>
+
+
+<script type="text/javascript" charset="utf-8">
+
+/** ----------------------------------------------- **/
+/** Example with Linear Graph **/
+/** ----------------------------------------------- **/
+var $intial = {};
+$intial.a = 1;
+$intial.b = 2;
+$intial.xi = -4;
+$intial.xf = 3;
+
+var canvas = document.getElementById('grafic-1-grau');
+var canvasj = $('#grafic-1-grau');
+
+var x = {'min': $intial.xi, 'max': $intial.xf};
+var param = {'a':$intial.a, 'b':$intial.b};
+
+var grafic = new PlotGraph(canvas, canvasj, func_linear.func, param);
+
+/* Call functions to display the graph */
+grafic.init();
+grafic.plot(x);
+
+/* User Interface function */
+$('#func_linear').submit(function(){
+	var a = parseFloat($('#ca').val()), b = parseFloat($('#cb').val()),
+		xi = parseFloat($('#cxi').val()), xf = parseFloat($('#cxf').val());
+	function_ui(a, b, xi, xf);
+	return false;
+});
+
+</script>
+
+		</div> <!-- /panel-body -->
+	</div> <!-- /panel -->
+</div> <!-- /col -->
+</div> <!-- /row -->
+
+</div>
+
+</div> <!-- /container -->
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+.row{margin-top:30px;}
+.title-line, .title-text{border-bottom:1px solid #e6e6e6;}
+.title-text{font-weight:bold;font-size:110%;}
+.small-text{font-size:small;}
+.plot-grafic{width:100%;background-image:url('../img/bg-grafic.png');background-color:#f9f9f9;}
+.btn-margin{margin-top:10px;}
+btn.btn-margin{margin-top:20px;}
+.form-horizontal .form-group{margin-left:0;margin-right:0;}
+
+/* Formulario ----------------------- */
+label.error{background:rgba(229, 28, 35, 0.8);padding:4px 6px;border-radius:3px;margin-top:7px;color:#fff;}
+.input-group-addon{vertical-align:top;padding-top:12px;}
+
+table hr{margin-top:7px;margin-bottom:7px;border-top: 1px solid #ddd;}
