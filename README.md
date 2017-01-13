@@ -1,13 +1,13 @@
 # jPlotGraph #
 
 Links:      
-[Online Example](http://projects.leonardomauro.com/jplotgraph/example/) and [JS Classes](https://www.jsclasses.org/jplotgraph)
+[Online Example](http://projects.leonardomauro.com/jplotgraph/example/) and [JS Classes](https://www.jsclasses.org/jplotgraph)   
    
 This package build a graph (cartesian plane) in **Canvas** [HTML5] through a determinate equation. Any Canvas element can be used to plot the graph, until with width and height responsives.   
-
-The [Online Example](http://projects.leonardomauro.com/jplotgraph/example/) show a plot of linear function with many options to user interface. The user can in real-time do changes to the values of variables, `event.mousemove` to see a (x, y) in draw and `event.mouseclick` to pause the draw events. Also, use Canvas responsive (with Bootstrap) to display the program in various devices. This example is in the files.
    
-## Package  
+The [Online Example](http://projects.leonardomauro.com/jplotgraph/example/) show a plot of linear function with many options to user interface. The user can in real-time do changes to the values of variables, `event.mousemove` to see a (x, y) in draw and `event.mouseclick` to pause the draw events. Also, use Canvas responsive (with Bootstrap) to display the program in various devices. This example is in the files.   
+   
+## Package   
    
 The package is in `./dist/jPlotGraph/`, and are defined by two main classes:   
 *  *file* plot.axis.js - *class* `PlotGraph()`   
