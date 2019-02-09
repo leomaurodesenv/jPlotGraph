@@ -18,7 +18,7 @@ The package is in `./dist/jPlotGraph/`, and are defined by two main classes:
 But, the package don't work without `func_mmy` and `func_plot`. That's functions have to be included before of the plot graph. Theses functions define how draw the equation and how fit max and min values of f(x). See *file* plot.func.linear.js, used in example.   
    
 ## Also look ~  	
-* [License GPL v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)   
-* Create by Leonardo Mauro (leo.mauro.desenv@gmail.com)   
-* Git: [leomaurodesenv](https://github.com/leomaurodesenv/)   
-* Site: [Portfolio](http://leonardomauro.com/portfolio/)   
+- [License GPL v3](LICENSE)
+- Create by Leonardo Mauro (leo.mauro.desenv@gmail.com)
+- Git: [leomaurodesenv](https://github.com/leomaurodesenv/)
+- Site: [Portfolio](http://leonardomauro.com/portfolio/)
